@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+</head>
+<body>
+<p><b> This is the comment approval mail to display the comment on your site based on your approval </b></p>
+<h3><%= @comment.comment %></h3>
+<h5>is commented by:</h5>
+<h4><font color =#404040 ><%= @comment.commenter %></font></h4>
+<%= link_to "approved", "http://192.168.2.101:3000/comments/approve?cid=#{@comment.id}&approve=1" %>&nbsp;&nbsp;&nbsp;
+<%= link_to "Not approved","http://192.168.2.101:3000/comments/approve?cid=#{@comment.id}&approve=0" %>
+ 
+ 
+
+</body>
+</html>
+
